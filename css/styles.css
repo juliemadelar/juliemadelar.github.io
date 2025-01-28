@@ -16,17 +16,17 @@
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: opacity 1.2s, transform 1.2s; /* Slower transition */
+    transition: transform 1.2s; /* Slower transition */
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 1;
+    transform: translateY(0);
 }
 
 .flip-card:hover .flip-card-inner {
-    opacity: 0;
-    transform: scale(0.9);
+    transform: translateY(-100%);
 }
+
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -43,27 +43,18 @@
     background-color: #ffffff; /* Change to desired color */
     color: black;
     opacity: 1;
-    transition: opacity 1.2s; /* Slower transition */
+    transition: opacity 3s; /* Slower transition */
 }
 
 .flip-card-back {
     background-color: #2980b9; /* Change to desired color */
     color: #ffffff; /* Change to a more visible color */
-    opacity: 0;
-    transition: opacity 1.2s; /* Slower transition */
+    transform: translateY(100%);
+    transition: transform 3s; /* Slower transition */
     font-family: 'Playfair Display', serif; /* Apply the stylish font */
-}
-    font-family: 'Playfair Display', serif; /* Apply the stylish font */
-}
-.flip-card:hover .flip-card-front {
-    opacity: 0;
 }
 
-.flip-card:hover .flip-card-back {
-    opacity: 1;
-}
-    opacity: 1;
-}
+
 /*!
 * Start Bootstrap - Personal v1.0.1 (https://startbootstrap.com/template-overviews/personal)
 * Copyright 2013-2023 Start Bootstrap
